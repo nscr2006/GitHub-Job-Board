@@ -10,7 +10,7 @@ export const JobsContext = createContext();
 const App = () => {
   const [data, setData] = useState({ jobs: [] });
   const [loading, setLoading] = useState();
-  // const [error, setError] = useState({ error: false });
+
   const [resultLength, setResultLength] = useState();
   const [searchInput, setSearchInput] = useState('');
   const [locationInput, setLocationInput] = useState('');
@@ -36,13 +36,7 @@ const App = () => {
       }));
       setResultLength(result.length);
     }
-    // else {
-    //     setError({
-    //         error: true,
-    //         statusCode: returned.status,
-    //         statusText: returned.statusText
-    //     })
-    // }
+
     setLoading(false);
   };
 
